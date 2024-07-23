@@ -11,73 +11,95 @@ html {
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 }
-/*
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.main-body-style {
+  @apply bg-gradient-to-r from-indigo-950 to-fuchsia-900 h-screen overflow-x-hidden;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.portfolio-template {
+  @apply w-full flex flex-col;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.btnTest {
+  @apply border-amber-400;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.principalUserName {
+  @apply text-white font-semibold text-6xl text-center py-4;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Clase md del Navbar*/
+.headerScreenPortFolioHeaderSm {
+  @apply p-2 h-16 flex text-xl flex-row justify-center border backdrop-blur-sm bg-transparent/30 rounded-md;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Clase para los estilos de los botones del navbar */
+.navbar-buttons-style {
+  @apply hover:scale-105 transition-transform duration-200 no-underline hover:cursor-pointer hover:bg-amber-500 flex px-4 text-white text-center items-center rounded;
 }
- */
+
+/* Clases de los estilos TailwindCSS teléfono */
+.header-phone-principal {
+  @apply p-2 h-16 w-full border flex flex-row justify-between items-center backdrop-blur-sm bg-transparent/30 rounded-md;
+}
+
+.main-template-body-phone {
+  @apply flex flex-col py-8 mx-2 justify-center;
+}
+
+.title-photo-phone {
+  @apply flex flex-col justify-center align-middle;
+}
+
+.main-titlename-phone {
+  @apply flex flex-col hover:scale-105 transition-transform duration-200 cursor-pointer align-middle justify-center ml-2;
+}
+
+.main-subtitle-phone {
+  @apply text-white text-2xl font-normal italic;
+}
+
+.main-about-me-phone {
+  @apply flex flex-col justify-center mt-12 mb-6 mx-8;
+}
+
+.main-about-me-listbox-phone {
+  @apply flex flex-col justify-center my-6 mx-8;
+}
+
+.main-info-box-phone {
+  @apply flex flex-col justify-center my-6 mx-8;
+}
+
+
+/* InformationBox Component Classes */
+.information-composition-phone {
+  @apply flex flex-col;
+}
+
+.information-flex-phone {
+  @apply flex align-middle;
+}
+
+.information-h1-phone {
+  @apply text-2xl font-bold align-middle my-2 text-center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.portfolio-pic-animation {
+  @apply items-center self-center m-2 h-64 w-64 hover:scale-105 from-gray-800 to-gray-600 transition-transform duration-200;
+}
