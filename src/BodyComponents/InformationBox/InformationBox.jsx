@@ -1,6 +1,15 @@
 
-
-function InformationBox({ titleContent, bodyContent1, bodyContent2, span1, span2, spanHref, contentHref, datesContent, pathFillRuleD }) {
+function InformationBox({
+    titleContent,
+    bodyContent1,
+    bodyContent2,
+    span1,
+    span2,
+    spanHref,
+    contentHref,
+    datesContent,
+    pathFillRuleD
+}) {
     return (
         <div className="information-composition">
             <div className="information-flex-phone">

@@ -24,10 +24,6 @@ html {
   @apply border-amber-400;
 }
 
-.principalUserName {
-  @apply text-white font-semibold text-6xl text-center py-4;
-}
-
 /* Clase md del Navbar*/
 .headerScreenPortFolioHeaderSm {
   @apply p-2 h-16 flex text-xl flex-row justify-center border backdrop-blur-sm bg-transparent/30 rounded-md;
@@ -51,9 +47,14 @@ html {
   @apply flex flex-col justify-center align-middle;
 }
 
-.main-titlename-phone {
-  @apply flex flex-col hover:scale-105 transition-transform duration-200 cursor-pointer align-middle justify-center ml-2;
+.principalUserName {
+  @apply text-white border-l-4 border-b-2 font-semibold text-6xl w-max pl-4 pr-8 pb-2 my-6;
 }
+
+.main-titlename-phone {
+  @apply flex flex-col hover:scale-105 transition-transform duration-200 cursor-pointer align-middle justify-center items-center ml-2;
+}
+
 
 .main-subtitle-phone {
   @apply text-white text-2xl font-normal italic;
