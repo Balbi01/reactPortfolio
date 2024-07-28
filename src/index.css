@@ -12,6 +12,10 @@ html {
   background-color: #242424;
 }
 
+.separator {
+  @apply h-1 mt-7 bg-amber-500 w-9/12;
+}
+
 .main-body-style {
   @apply bg-gradient-to-r from-indigo-950 to-fuchsia-900 h-screen overflow-x-hidden;
 }
@@ -61,11 +65,11 @@ html {
 }
 
 .main-about-me-phone {
-  @apply flex flex-col justify-center mt-12 mb-6 mx-8;
+  @apply flex flex-col justify-center mt-8 mb-6 mx-8;
 }
 
 .main-about-me-listbox-phone {
-  @apply flex flex-col justify-center my-6 mx-8;
+  @apply flex flex-col justify-center mb-6 mx-8;
 }
 
 .main-info-box-phone {
@@ -83,7 +87,7 @@ html {
 }
 
 .information-h1-phone {
-  @apply text-2xl font-bold align-middle my-2 text-center;
+  @apply text-2xl font-bold align-middle mb-2;
 }
 
 

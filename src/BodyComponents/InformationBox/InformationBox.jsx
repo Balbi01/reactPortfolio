@@ -1,5 +1,5 @@
 
-function InformationBox({
+function InformationBox ({
     titleContent,
     bodyContent1,
     bodyContent2,
