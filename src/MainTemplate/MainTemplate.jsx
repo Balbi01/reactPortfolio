@@ -4,8 +4,11 @@ import InformationBox from "../BodyComponents/InformationBox/InformationBox";
 import ListBox from "../BodyComponents/ListBox/ListBox";
 import portfolio from "../../src/assets/portfolio_pic.jpg";
 import CardBox from "../BodyComponents/CardBox/CardBox";
+import ExpandibleMenu from "../BodyComponents/ExpandibleMenu/ExpandibleMenu";
 
 function MainTemplate() {
+    let showMenu = false;
+
     const handleLinkedinClick = () => {
         window.open('https://www.linkedin.com/in/omaribanez343', '_blank');
     };
@@ -17,6 +20,11 @@ function MainTemplate() {
     return (
         <div className="main-body-style">
             <div id="portfolio-template" className="portfolio-template">
+                <div id="menu" className="static">
+                    <ExpandibleMenu
+                        showMenu={showMenu}
+                    />
+                </div>
                 <div id="header">
                     {/* Navbar */}
                     <div id="screen-header" className="hidden sm:block">
