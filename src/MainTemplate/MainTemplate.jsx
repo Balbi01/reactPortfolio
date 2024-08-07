@@ -99,7 +99,7 @@ function MainTemplate() {
                         <ListBox
                             boxTitle="Experiencia"
                             span1="Evidence Tech"
-                            listItem1="Desarrollador Full Stack, en la ciudad de Torreón, Coahuila."
+                            listItem1="Desarrollador Full Stack, en la ciudad de Torreón, Coahuila. Programación con PHP y Laravel, Vue JavaScript."
                             date1="(Julio 2023 - Actualidad)"
                             ref1="https://evidencetec.com/?gad_source=1&gclid=CjwKCAjw0YGyBhByEiwAQmBEWoKjiismkqCsCXyeMAEn17mjoZSIF9e2fnFc8-YmZOgUrfmxVK2tThoCPwsQAvD_BwE"
                             span2="Grupo Industrial Saltillo"
@@ -154,7 +154,7 @@ function MainTemplate() {
                         <div className="separator"></div>
                     </div>
 
-                    <div id="about-me" className="md:max-w-96 md:px-0 md:self-center flex flex-col w-full px-8 py-8">
+                    <div id="about-me" className="md:max-w-96 lg:max-w-2xl md:px-0 md:self-center flex flex-col w-full px-8 py-8">
                         <div className="flex items-center ">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-8 mr-2">
                                 <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />

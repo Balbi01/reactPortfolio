@@ -86,7 +86,7 @@ html {
 }
 
 .information-composition{
-  @apply md:max-w-96 md:self-center;
+  @apply md:max-w-96 lg:max-w-2xl md:self-center;
 }
 
 /* InformationBox Component Classes */

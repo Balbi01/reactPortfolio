@@ -4,7 +4,7 @@ function CardBox ({
     buttonTitle
 }) {
     return (
-        <div className="md:max-w-96 border flex flex-col w-8/12 justify-center rounded-xl items-center mt-6 mb-2">
+        <div className="sm:max-w-96 max-w-72 border flex flex-col justify-center rounded-xl items-center mt-6 mb-2">
             <div>
                 <img className="rounded-t-xl" src={imageSrc} alt="" />
             </div>
