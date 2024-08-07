@@ -53,7 +53,7 @@ html {
 
 .title-photo-phone {
   @apply flex flex-col justify-center align-middle md:flex-row
-  lg:justify-end lg:h-auto;
+  lg:justify-end lg:h-auto lg:mt-24;
 }
 
 .principalUserName {
@@ -74,7 +74,7 @@ html {
 }
 
 .main-about-me-phone {
-  @apply flex flex-col justify-center mt-8 mb-6 mx-8;
+  @apply flex flex-col justify-center mt-8 mb-6 mx-8 lg:mt-20;
 }
 
 .main-about-me-listbox-phone {
@@ -86,7 +86,7 @@ html {
 }
 
 .information-composition{
-  @apply md:max-w-96 lg:max-w-2xl md:self-center;
+  @apply max-w-96 self-center md:max-w-96 lg:max-w-2xl md:self-center;
 }
 
 /* InformationBox Component Classes */

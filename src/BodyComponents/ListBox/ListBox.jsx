@@ -20,7 +20,7 @@ function ListBox({ boxTitle,
     pathFillRuleD
 }) {
     return (
-        <div className="flex flex-col md:max-w-96 lg:max-w-2xl md:self-center">
+        <div className="flex flex-col max-w-96 self-center md:max-w-96 lg:max-w-2xl md:self-center">
             <div className="flex align-middle h-12 my-3">
 
                 {pathFillRuleD && (
