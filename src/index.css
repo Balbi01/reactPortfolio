@@ -21,7 +21,9 @@ html {
 }
 
 .portfolio-template {
-  @apply w-full flex flex-col;
+  @apply w-full flex flex-col
+  mt-16 sm:mt-0
+  ;
 }
 
 .btnTest {

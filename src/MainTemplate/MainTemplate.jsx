@@ -5,9 +5,11 @@ import ListBox from "../BodyComponents/ListBox/ListBox";
 import portfolio from "../../src/assets/portfolio_pic.jpg";
 import CardBox from "../BodyComponents/CardBox/CardBox";
 import ExpandibleMenu from "../BodyComponents/ExpandibleMenu/ExpandibleMenu";
+import { useState, useEffect, useRef } from "react";
 
 function MainTemplate() {
-    let showMenu = false;
+    const [showMenu, setShowMenu] = useState(false);
+    const menuRef = useRef(null);
 
     const handleLinkedinClick = () => {
         window.open('https://www.linkedin.com/in/omaribanez343', '_blank');
@@ -17,12 +19,46 @@ function MainTemplate() {
         window.open('https://github.com/Balbi01', '_blank');
     };
 
+    const toogleMenu = (forceState) => {
+        if(typeof forceState === 'string') {
+            console.log(forceState);
+            handleSectionClick(forceState);
+        }
+
+        setShowMenu(prevShowMenu => !prevShowMenu);
+    };
+
+    const handleClickOutside = (event) => {
+        if (menuRef.current && !menuRef.current.contains(event.target)) {
+            setShowMenu(false);
+        }
+    };
+
+    useEffect(() => {
+        if (showMenu) {
+            document.addEventListener('mousedown', handleClickOutside);
+        } else {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+
+    }, [showMenu]);
+
+    const handleSectionClick = (sectionId) => {
+        window.location.href = `#${sectionId}`;
+    };
+
+
     return (
         <div className="main-body-style">
             <div id="portfolio-template" className="portfolio-template">
-                <div id="menu" className="static">
+                <div id="menu" className="static" ref={menuRef}>
                     <ExpandibleMenu
                         showMenu={showMenu}
+                        toogleMenu={toogleMenu}
                     />
                 </div>
                 <div id="header">
@@ -30,8 +66,12 @@ function MainTemplate() {
                     <div id="screen-header" className="hidden sm:block">
                         <HeaderScreen />
                     </div>
-                    <div id="phone-header" className="sm:hidden">
-                        <HeaderPhone />
+                    <div id="phone-header" className="sm:hidden
+                    flex flex-col absolute w-full top-0 left-0
+                    ">
+                        <HeaderPhone
+                            toogleMenu={toogleMenu}
+                        />
                     </div>
                 </div>
 
@@ -83,7 +123,7 @@ function MainTemplate() {
                         </svg>
                     </div> */}
 
-                    <div id="about-me" className="main-about-me-phone">
+                    <div id="welcomeSection" className="main-about-me-phone">
                         <InformationBox
                             titleContent="¡Bienvenido a mi portafolio!"
                             bodyContent1="+2 años de experiencia. "
@@ -141,7 +181,7 @@ function MainTemplate() {
 
                     <div id="cards" className="flex flex-col justify-center items-center">
 
-                    <h1 className="text-2xl font-bold text-center pt-6">Proyectos</h1>
+                    <h1 id="projectsSection" className="text-2xl font-bold text-center pt-6">Proyectos</h1>
 
                         <CardBox
                             imageSrc="https://lagrowthmachine.twic.pics/https://lagrowthmachine.com/app/uploads/2022/06/7053342.jpg?twic=v1/cover=589:391/resize=408/max=2000"
